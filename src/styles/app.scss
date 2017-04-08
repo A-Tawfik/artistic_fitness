@@ -1,6 +1,6 @@
 body{
-  /*background-image: url("/assets/horizontal-line.png");*/
-  background: url("/assets/horizontal-lines_black.png");
+  /*background-image: url("/img/horizontal-line.png");*/
+  background: url("img/horizontal-lines_black.png");
   /*background: black;*/
 }
 .row{
@@ -301,7 +301,7 @@ h1{
 
 .left-gif{
   height: 100%;
-  background: url("/assets/48-exercises-in-one-animated-gif.png");
+  background: url("/img/48-exercises-in-one-animated-gif.png");
   background-position-x: -15px;
     background-position-y: -20px;
     background-size: 800px;
@@ -309,14 +309,14 @@ h1{
 }
 .right-gif{
   height: 100%;
-  background: url("/assets/48-exercises-in-one-animated-gif.png");
+  background: url("/img/48-exercises-in-one-animated-gif.png");
   background-position-x: -15px;
   background-position-y: -120px;
     background-size: 800px;
 }
 
 .demo-button:hover .left-gif{
-  background: url("/assets/48-exercises-in-one-animated-gif.gif");
+  background: url("/img/48-exercises-in-one-animated-gif.gif");
   background-position-x: -15px;
     background-position-y: -20px;
     background-size: 800px;
@@ -324,7 +324,7 @@ h1{
 
 .demo-button:hover .right-gif{
   height: 100%;
-  background: url("/assets/48-exercises-in-one-animated-gif.gif");
+  background: url("/img/48-exercises-in-one-animated-gif.gif");
 
   background-position-x: -15px;
   background-position-y: -120px;
