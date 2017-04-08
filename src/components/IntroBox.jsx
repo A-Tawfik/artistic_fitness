@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 export default class IntroBox extends React.Component {
 
   playVideo(e) {
@@ -21,8 +22,8 @@ export default class IntroBox extends React.Component {
             <div className={this.props.data.className + " box col-xs-12 col-sm-6"} onClick={this.handleClick.bind(this)}>
               <div className="row box-title"><h2>{this.props.data.title}</h2></div>
               <div className="row box-img">
-                <video loop onMouseOver={this.playVideo} onMouseLeave={this.stopVideo}>
-                  <source src={this.props.data.video} type="video/mp4" />
+                <video src={this.props.data.video} type="video/mp4" loop onMouseOver={this.playVideo} onMouseLeave={this.stopVideo}>
+                  {/* <source  type="video/mp4" /> */}
                 </video>
               </div>
               <div className="quote">

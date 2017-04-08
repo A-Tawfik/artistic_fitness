@@ -11,7 +11,8 @@ export default class App extends React.Component {
       content: "intro",
       lefts: [],
       rights: [],
-      centers: []
+      centers: [],
+      cert: require("../../assets/images/NASM_cert.gif")
     }
     this.changePage = this.changePage.bind(this)
   }
@@ -71,9 +72,11 @@ export default class App extends React.Component {
   }
 
   componentDidMount(){
-    this.setState({rights: document.getElementsByClassName(this.props.data[0].name)})
-    this.setState({lefts: document.getElementsByClassName(this.props.data[1].name)})
-    this.setState({centers: document.getElementsByClassName("intro")})
+    this.setState({
+      rights: document.getElementsByClassName(this.props.data[0].name),
+      lefts: document.getElementsByClassName(this.props.data[1].name),
+      centers: document.getElementsByClassName("intro")
+    })
 
     if (this.state.content == "him") {
      this.toHim();
@@ -99,10 +102,10 @@ export default class App extends React.Component {
   }
 
    render() {
-    var intros = this.props.data.map((data, i)=>{return(<IntroBox key={i} data={data} changePage={this.changePage}/>)})
-    var videos = this.props.data.map((data, i)=>{return(<VideoPage key={i} data={data}/>)})
+    let intros = this.props.data.map((data, i)=>{return(<IntroBox key={i} data={data} changePage={this.changePage}/>)})
+    let videos = this.props.data.map((data, i)=>{return(<VideoPage key={i} data={data}/>)})
 
-
+    // debugger;
       return (
         <div className="app-wrap">
           <PageHeader>ARTISTIC FITNESS </PageHeader>
@@ -112,7 +115,7 @@ export default class App extends React.Component {
         <div className="content col-xs-12">
           <div className="center intro">
             {intros}
-            <div className="cert col-xs-12"> <img src="assets/NASM_cert.gif" alt="" /></div>
+            <div className="cert col-xs-12"> <img src={this.state.cert} alt="" /></div>
           </div>
             {videos}
 

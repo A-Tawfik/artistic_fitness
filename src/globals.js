@@ -4,7 +4,7 @@ global.data = [
     title: "Work Out With Him", //This is the title that is above your intro video
     quote: ['"Dream It. Do It. Be It"'],
     className: "him", //don't mess with this
-    video: "./assets/videos/him-intro.mp4", // this is your intro video
+    video: require("../assets/videos/him-intro.mp4"), // this is your intro video
     videoPosition: "right", // this is what side the video's play on your demo videos page
     buttons: [
             {
@@ -48,7 +48,7 @@ global.data = [
     title: "Work Out With Her",
     quote: ['"FIT. To Be You."'],
     className: "her",
-    video: "./assets/videos/her-intro.mp4",
+    video: require("../assets/videos/her-intro.mp4"),
     videoPosition: "left",
     buttons: [
             {
